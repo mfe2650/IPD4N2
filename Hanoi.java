@@ -1,20 +1,24 @@
 public class Hanoi {
+    ///
+    // これはAIが生成したハノイの塔の解法です。
+    ///
+    
     /**
      * n枚の円盤を from から to へ、aux を補助柱として移動する。
      */
-    public static void solveHanoi(int n, char from, char aux, char to) {
-        if (n <= 0) {
+    public static void solveHanoi(int a, char from, char aux, char to) {
+        if (a <= 0) {
             return;
         }
 
         // 1) 上の n-1 枚を補助柱へ移動
-        solveHanoi(n - 1, from, to, aux);
+        solveHanoi(a - 1, from, to, aux);
 
         // 2) 一番大きい円盤を目的柱へ移動
-        System.out.println("円盤 " + n + " を " + from + " から " + to + " へ移動");
+        System.out.println("円盤 " + a + " を " + from + " から " + to + " へ移動");
 
         // 3) 補助柱の n-1 枚を目的柱へ移動
-        solveHanoi(n - 1, aux, from, to);
+        solveHanoi(a - 1, aux, from, to);
     }
 
     public static void main(String[] args) {
