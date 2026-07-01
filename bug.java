@@ -1,6 +1,10 @@
 import java.io.FileInputStream;
 import java.io.IOException;
 
+///
+/// これは意図的にバグを含むサンプルコードです。静的解析ツールのテスト用に使用できます。
+///
+
 public class bug {
     // ログイン失敗時は null を返す
     static String getSessionToken(boolean success) {
